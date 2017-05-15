@@ -1,0 +1,23 @@
+
+<ion-menu [content]="myContent"> <!-- Associa o menu ao conteudo do ion-nav [root] -->
+
+<!-- para usar o toolbar term que colocar dentro de um ion-header ou footer -->
+
+<ion-header padding>
+  <ion-toolbar>
+      <img src="assets/img/logo.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<!-- crian o conteudo do menu -->
+<ion-content >
+  <ion-list >
+    <button color="danger" ion-item *ngFor="let p of pages" (click)="openPage(p)">
+    {{p.title}}
+    </button>
+  </ion-list>
+</ion-content>
+
+</ion-menu>
+
+<ion-nav #myContent [root]="rootPage"></ion-nav>

@@ -1,0 +1,52 @@
+<ion-header >
+
+  <ion-navbar color="danger" >
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>{{item.produto}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+    <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{item.foto }}"/>
+
+      <p>
+        {{item.descricao}}
+      </p>
+
+    <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="heart"></ion-icon>
+        <div>Favoritos</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div> 12 Comentários</div>
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+  <ion-item>
+    <h2><strong>Quarta da Coca</strong></h2>
+    <h3>Supermercado ideal</h3>
+    <p>11/05/2017</p>
+  </ion-item>
+  <ion-item>
+    <h2><strong>Quarta da Coca</strong></h2>
+    <h3>Supermercado ideal</h3>
+    <p>11/05/2017</p>
+  </ion-item>
+  <ion-item>
+    <h2><strong>Quarta da Coca</strong></h2>
+    <h3>Supermercado ideal</h3>
+    <p>11/05/2017</p>
+  </ion-item>
+
+</ion-list>
+
+</ion-content>
