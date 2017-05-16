@@ -23,14 +23,19 @@ export class ProdutoService {
   // faz a pesquisa no banco de dados pela api morest
   load(val) {
 
+
+
+
     //pega a variavel passada com parametro
     let url = this.urlbase + val;
     console.log('valor url', url);
 
-
+    /*
     if (this.rest) {
       return Promise.resolve(this.rest);
     }
+    */
+
     // Se ainda não tem os dados
     return new Promise(resolve => {
       this.http.get(url)
