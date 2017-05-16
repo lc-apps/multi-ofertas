@@ -4,8 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { OverlayPage } from '../pages/overlay/overlay';
-import { AlertPage } from '../pages/alert/alert';
 import { ProdutosPage } from '../pages/produtos/produtos';
 
 @Component({
@@ -26,8 +24,6 @@ export class MyApp {
     this.pages = [
 
       {title: 'Home', component: HomePage},
-      {title: 'OverLay Components', component: OverlayPage},
-      {title: 'Alert', component: AlertPage},
       {title: 'Produtos', component: ProdutosPage}
 
     ];

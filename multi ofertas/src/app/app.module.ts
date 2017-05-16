@@ -8,13 +8,10 @@ import { HttpModule } from '@angular/http';
 
 // Pipes
 import { Image } from './../pipes/image';
-import { Lower } from './../pipes/lower';
 
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { OverlayPage } from '../pages/overlay/overlay';
-import { AlertPage } from '../pages/alert/alert';
 import { ProdutosPage } from '../pages/produtos/produtos';
 import { ProdutoDetalhe } from '../pages/produto-detalhe/produto-detalhe';
 
@@ -22,13 +19,10 @@ import { ProdutoDetalhe } from '../pages/produto-detalhe/produto-detalhe';
 @NgModule({
   declarations: [
     ProdutoDetalhe,
-    Lower,
     Image,
     ProdutosPage,
-    AlertPage,
     MyApp,
-    HomePage,
-    OverlayPage
+    HomePage
 
   ],
   imports: [
@@ -41,10 +35,8 @@ import { ProdutoDetalhe } from '../pages/produto-detalhe/produto-detalhe';
   entryComponents: [
     ProdutoDetalhe,
     ProdutosPage,
-    AlertPage,
     MyApp,
-    HomePage,
-    OverlayPage
+    HomePage
   ],
 
   providers: [
