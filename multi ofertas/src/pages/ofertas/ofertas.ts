@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+// Importando serviço
+import {OfertasService} from '../../providers/ofertas-service';
+
 /**
  * Generated class for the Ofertas page.
  *
@@ -11,10 +14,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-ofertas',
   templateUrl: 'ofertas.html',
+  providers: [OfertasService],
 })
+
 export class Ofertas {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ofertas: any;
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public ofertasService: OfertasService, ) {
+    this.getOfertas();
+  }
+
+  //chama ofertas
+  getOfertas() {
+    this.ofertasService.getOfertas()
+      .then(data => {
+        this.ofertas = data;
+      });
   }
 
   ionViewDidLoad() {

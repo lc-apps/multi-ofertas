@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
+
+// Importando serviço
 import {ProdutoService} from '../../providers/produto-service';
 
-
+// Importando página
 import { ProdutoDetalhe } from '../../pages/produto-detalhe/produto-detalhe';
 
 /**
@@ -29,7 +32,8 @@ export class ProdutosPage {
   searchQuery: string = '';
 
   constructor(public navCtrl: NavController,
-              public produtoService: ProdutoService) {
+              public produtoService: ProdutoService,
+              public alertCtrl: AlertController) {
 
 
   }
@@ -48,6 +52,16 @@ export class ProdutosPage {
           this.produtos = rest;
         });
     }
+    else {
+      // se vazio mostra alert.
+        let alert = this.alertCtrl.create({
+          title: 'Atenção',
+          subTitle: 'Digite um produto para realizar a pesquisa !',
+          buttons: ['OK']
+        });
+    alert.present();
+
+          }
   }
 
 

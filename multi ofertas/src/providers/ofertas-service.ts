@@ -11,8 +11,40 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class OfertasService {
 
+  rest: any;
+  urlbase: string = "https://morest.herokuapp.com/campanhas";
+
+
   constructor(public http: Http) {
+  this.getOfertas();
+
     console.log('Hello OfertasService Provider');
   }
+
+
+
+
+    getOfertas() {
+
+    let url = this.urlbase;
+    console.log('valor url', url);
+
+    if (this.rest) {
+      return Promise.resolve(this.rest);
+    }
+
+    return new Promise(resolve => {
+      this.http.get(url)
+        .map(res => res.json())
+        .subscribe(data => {
+          this.rest = data;
+          resolve(this.rest);
+        });
+
+    });
+  }
+
+
+
 
 }

@@ -19,7 +19,6 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item-sliding>
       <ion-item *ngFor="let item of produtos" (click)="itemSelected(item)">
         <ion-thumbnail item-left>
           <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{item.foto | image}}">
@@ -27,19 +26,5 @@
         <h2 class="item"><strong>{{item.produto}}</strong> </h2>
 
       </ion-item>
-
-
-      <ion-item-options side="right">
-        <button ion-button color="primary">
-        <ion-icon name="search"></ion-icon>
-        Detalhes
-      </button>
-        <button ion-button color="danger">
-      <ion-icon name="heart"></ion-icon>
-      Favorito
-    </button>
-      </ion-item-options>
-
-    </ion-item-sliding>
   </ion-list>
 </ion-content>

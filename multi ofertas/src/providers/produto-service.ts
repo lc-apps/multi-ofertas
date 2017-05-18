@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { AlertController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
 /*
@@ -16,8 +17,11 @@ export class ProdutoService {
   param: string;
 
 
-  constructor(public http: Http) {
+  constructor(public http: Http,
+              public alertCtrl: AlertController) {
+
     console.log('Hello ProdutoService Provider');
+
   }
 
   // faz a pesquisa no banco de dados pela api morest
@@ -41,9 +45,10 @@ export class ProdutoService {
       this.http.get(url)
         .map(res => res.json())
         .subscribe(data => {
-          this.rest = data;
-          resolve(this.rest);
+            this.rest = data;
+            resolve(this.rest);
         });
+
     });
   }
 

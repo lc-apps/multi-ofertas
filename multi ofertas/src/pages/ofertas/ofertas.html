@@ -11,5 +11,13 @@
 
 
 <ion-content padding>
-
+  <h2 class="special" >Ofertas Especiais</h2>
+  <ion-list>
+    <ion-item *ngFor="let oferta of ofertas">
+      <ion-thumbnail item-left>
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
+      </ion-thumbnail>
+      <h2 class="item"><strong>{{oferta.produto}}</strong> </h2>
+    </ion-item>
+  </ion-list>
 </ion-content>
