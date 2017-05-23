@@ -15,10 +15,12 @@ import { HomePage } from '../pages/home/home';
 import { ProdutosPage } from '../pages/produtos/produtos';
 import { ProdutoDetalhe } from '../pages/produto-detalhe/produto-detalhe';
 import { Ofertas } from '../pages/ofertas/ofertas';
+import { Campanhas } from '../pages/campanhas/campanhas';
 
 
 @NgModule({
   declarations: [
+    Campanhas,
     ProdutoDetalhe,
     Ofertas,
     Image,
@@ -35,6 +37,7 @@ import { Ofertas } from '../pages/ofertas/ofertas';
 
   bootstrap: [IonicApp],
   entryComponents: [
+    Campanhas,
     ProdutoDetalhe,
     ProdutosPage,
     Ofertas,

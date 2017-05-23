@@ -1,0 +1,22 @@
+<ion-header >
+  <ion-navbar color="danger">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Campanhas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2 class="special" >Campanhas</h2>
+  <ion-list>
+    <ion-item *ngFor="let campanha of campanhas">
+      <h2 class="item">{{campanha.descricao}}</h2>
+      <h3>{{campanha.nome_fantasia}}</h3>
+      <p> <strong>Promoções validas de </strong>{{campanha.data_inicio}}<strong> até </strong>{{campanha.data_fim}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
