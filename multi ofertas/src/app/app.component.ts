@@ -15,7 +15,7 @@ export class MyApp {
 
   // cria o arry das páginas
 
-  pages: Array<{title:string , component: any}> = [];
+  pages: Array<{title:string ,icon:string, component: any}> = [];
 
   rootPage:any = HomePage;
 
@@ -25,10 +25,10 @@ export class MyApp {
 
     this.pages = [
 
-      {title: 'Home', component: HomePage},
-      {title: 'Campanhas', component: Campanhas},
-      {title: 'Produtos', component: ProdutosPage},
-      {title: 'Ofertas Especiais', component: Ofertas}
+      {title: 'Home',icon: 'ios-home', component: HomePage},
+      {title: 'Campanhas',icon: 'bookmark', component: Campanhas},
+      {title: 'Produtos',icon: 'basket', component: ProdutosPage},
+      {title: 'Ofertas Especiais',icon: 'pricetags', component: Ofertas}
 
     ];
 
@@ -41,7 +41,7 @@ export class MyApp {
     });
   }
 
- openPage(page: {title:string , component: any} ): void{
+ openPage(page: {title:string ,icon:string, component: any} ): void{
     this.rootPage = page.component;
     this.menuCTRL.close();
  }
