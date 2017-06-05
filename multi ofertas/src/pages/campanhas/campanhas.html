@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header>
   <ion-navbar color="danger">
     <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
@@ -11,12 +11,25 @@
 
 
 <ion-content padding>
-  <h2 class="special" >Campanhas</h2>
-  <ion-list>
-    <ion-item *ngFor="let campanha of campanhas">
-      <h1 class="item">{{campanha.camp_desc}}</h1>
-      <h2>{{campanha.nome_mercado}}</h2>
-      <p><strong>Promoções validas de </strong >{{campanha.data_inicio}}<strong> até </strong>{{campanha.data_fim}}</p>
+  <h2 class="special">Campanhas</h2>
+
+  <ion-card *ngFor="let campanha of campanhas">
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
+      </ion-avatar>
+      <strong>{{campanha.camp_desc}} </strong >
+      <p>{{campanha.nome_mercado}}</p>
     </ion-item>
-  </ion-list>
+
+    <img src="assets/img/off.png">
+
+      <p>
+      <strong>Promoções validas de </strong ><br>{{campanha.data_inicio}}<strong> até <br></strong>{{campanha.data_fim}}
+      </p>
+
+
+  </ion-card>
+
 </ion-content>
