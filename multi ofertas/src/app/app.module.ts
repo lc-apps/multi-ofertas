@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 
 // Pipes
 import { Image } from './../pipes/image';
+import { DataInicio } from './../pipes/datainicio';
 
 
 import { MyApp } from './app.component';
@@ -24,6 +25,7 @@ import { Campanhas } from '../pages/campanhas/campanhas';
     ProdutoDetalhe,
     Ofertas,
     Image,
+    DataInicio,
     ProdutosPage,
     MyApp,
     HomePage

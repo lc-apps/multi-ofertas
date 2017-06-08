@@ -10,26 +10,21 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
   <h2 class="special">Campanhas</h2>
 
-  <ion-card *ngFor="let campanha of campanhas">
-
-    <ion-item>
-      <ion-avatar item-left>
+  <ion-list>
+    <ion-item *ngFor="let campanha of campanhas">
+      <ion-thumbnail item-left>
         <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
-      </ion-avatar>
-      <strong>{{campanha.camp_desc}} </strong >
-      <p>{{campanha.nome_mercado}}</p>
+      </ion-thumbnail>
+      <h2><strong>{{campanha.camp_desc}} </strong ></h2>
+      <h3>{{campanha.nome_mercado}}</h3>
+      <ion-row>
+        <ion-col col-2><ion-icon class="icone" name="calendar"> </ion-icon></ion-col>
+        <ion-col col-9>{{campanha.data_inicio | datainicio}}<strong><br></strong>{{campanha.data_fim | datainicio}}</ion-col>
+      </ion-row>
     </ion-item>
-
-    <img src="assets/img/off.png">
-
-      <p>
-      <strong>Promoções validas de </strong ><br>{{campanha.data_inicio}}<strong> até <br></strong>{{campanha.data_fim}}
-      </p>
-
-
-  </ion-card>
+  </ion-list>
 
 </ion-content>
