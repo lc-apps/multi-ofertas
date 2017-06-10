@@ -72,14 +72,7 @@ export class ProdutosPage {
   });
     }
 
-/* Carrega a listagem de produtos
-  loadProduto() {
-    this.produtoService.load()
-      .then(rest => {
-        this.produtos = rest;
-      });
-  }
-*/
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProdutosPage');
   }

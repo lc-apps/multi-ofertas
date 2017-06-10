@@ -15,6 +15,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProdutosPage } from '../pages/produtos/produtos';
 import { ProdutoDetalhe } from '../pages/produto-detalhe/produto-detalhe';
+import {CampanhaProdutos} from '../pages/campanha-produtos/campanha-produtos';
 import { Ofertas } from '../pages/ofertas/ofertas';
 import { Campanhas } from '../pages/campanhas/campanhas';
 
@@ -23,6 +24,7 @@ import { Campanhas } from '../pages/campanhas/campanhas';
   declarations: [
     Campanhas,
     ProdutoDetalhe,
+    CampanhaProdutos,
     Ofertas,
     Image,
     DataInicio,
@@ -41,6 +43,7 @@ import { Campanhas } from '../pages/campanhas/campanhas';
   entryComponents: [
     Campanhas,
     ProdutoDetalhe,
+    CampanhaProdutos,
     ProdutosPage,
     Ofertas,
     MyApp,

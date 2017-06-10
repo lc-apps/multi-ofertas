@@ -14,7 +14,7 @@
   <h2 class="special">Campanhas</h2>
 
   <ion-list>
-    <ion-item *ngFor="let campanha of campanhas">
+    <ion-item *ngFor="let campanha of campanhas" (click)="CampanhaSelecionada(campanha)">
       <ion-thumbnail item-left>
         <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
       </ion-thumbnail>

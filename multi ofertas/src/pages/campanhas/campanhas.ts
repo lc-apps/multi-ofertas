@@ -4,6 +4,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // Importando serviço
 import {CampanhasService } from '../../providers/campanhas-service';
 
+// Importando Página
+import {CampanhaProdutos} from '../../pages/campanha-produtos/campanha-produtos';
+
 /**
  * Generated class for the Campanhas page.
  *
@@ -27,12 +30,19 @@ export class Campanhas {
   }
 
   //chama Campanhas
-  getCampanhas() {
-    this.campanhasServices.getCampanhas()
-      .then(data => {
-        this.campanhas = data;
-      });
-  }
+   getCampanhas() {
+     this.campanhasServices.getCampanhas()
+       .then(data => {
+         this.campanhas = data;
+       });
+   }
+
+  // Mostra o detalhe do item selecionado
+    CampanhaSelecionada (campanha) {
+      this.navCtrl.push(CampanhaProdutos, {
+      campanha: campanha
+    });
+      }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Campanhas');
