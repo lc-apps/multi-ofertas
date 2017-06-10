@@ -27,9 +27,6 @@ export class ProdutoService {
   // faz a pesquisa no banco de dados pela api morest
   load(val) {
 
-
-
-
     //pega a variavel passada com parametro
     let url = this.urlbase + val;
     console.log('valor url', url);

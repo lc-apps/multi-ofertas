@@ -24,25 +24,28 @@ export class Campanhas {
   campanhas: any;
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams,
-              public campanhasServices: CampanhasService) {
-              this.getCampanhas();
+    public navParams: NavParams,
+    public campanhasServices: CampanhasService) {
+    this.getCampanhas();
+
   }
 
   //chama Campanhas
-   getCampanhas() {
-     this.campanhasServices.getCampanhas()
-       .then(data => {
-         this.campanhas = data;
-       });
-   }
+  getCampanhas() {
+    this.campanhasServices.getCampanhas()
+      .then(data => {
+        this.campanhas = data;
+      });
+  }
 
   // Mostra o detalhe do item selecionado
-    CampanhaSelecionada (campanha) {
-      this.navCtrl.push(CampanhaProdutos, {
+  CampanhaSelecionada(campanha) {
+    this.navCtrl.push(CampanhaProdutos, {
       campanha: campanha
+
     });
-      }
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Campanhas');

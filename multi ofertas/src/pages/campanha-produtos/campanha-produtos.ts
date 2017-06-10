@@ -14,7 +14,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CampanhaProdutos {
 
+ public campanha:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.campanha = navParams.get("campanha");
+    
   }
 
   ionViewDidLoad() {
