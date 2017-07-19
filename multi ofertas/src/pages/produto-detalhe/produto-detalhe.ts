@@ -19,6 +19,8 @@ public item:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   this.item = navParams.get("item");
 
+  console.log('item',this.item);
+
   }
 
   ionViewDidLoad() {

@@ -30,6 +30,7 @@ export class ProdutosPage {
 
   public produtos: any;
   searchQuery: string = '';
+  
 
   constructor(public navCtrl: NavController,
               public produtoService: ProdutoService,

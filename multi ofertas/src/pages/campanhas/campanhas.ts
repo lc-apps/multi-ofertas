@@ -4,6 +4,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // Importando serviço
 import {CampanhasService } from '../../providers/campanhas-service';
 
+// Importando serviço de Ofertas
+import {OfertasService} from '../../providers/ofertas-service';
+
 // Importando Página
 import {CampanhaProdutos} from '../../pages/campanha-produtos/campanha-produtos';
 
@@ -17,15 +20,17 @@ import {CampanhaProdutos} from '../../pages/campanha-produtos/campanha-produtos'
 @Component({
   selector: 'page-campanhas',
   templateUrl: 'campanhas.html',
-  providers: [CampanhasService],
+  providers: [CampanhasService, OfertasService],
 })
 export class Campanhas {
 
   campanhas: any;
+  ofertas: any;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public campanhasServices: CampanhasService) {
+    public campanhasServices: CampanhasService,
+    public ofertasService: OfertasService) {
     this.getCampanhas();
 
   }
@@ -38,13 +43,15 @@ export class Campanhas {
       });
   }
 
-  // Mostra o detalhe do item selecionado
+  //Mostra o detalhe do item selecionado
   CampanhaSelecionada(campanha) {
-    this.navCtrl.push(CampanhaProdutos, {
-      campanha: campanha
-
-    });
+    console.log('entrou no CampanhaSelecionada');
+    this.ofertasService.getOfertasId(campanha)
+      .then(data => {
+        this.ofertas = data;
+      });
   }
+
 
 
   ionViewDidLoad() {

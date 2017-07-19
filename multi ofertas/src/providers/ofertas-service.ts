@@ -12,20 +12,23 @@ import 'rxjs/add/operator/map';
 export class OfertasService {
 
   rest: any;
-  urlbase: string = "https://morest.herokuapp.com/campanhas";
+  idcampanha: string = "";
+  campanha: any;
+  urlbase: string = "https://morest.herokuapp.com/campanhas/";
 
 
   constructor(public http: Http) {
-  this.getOfertas();
+    this.getOfertas();
 
-    console.log('Hello OfertasService Provider');
+
+    console.log('entrou no ofertar services');
   }
 
 
 
 
-    getOfertas() {
-
+  getOfertas() {
+  console.log('entrou no getOfertas');
     let url = this.urlbase;
     console.log('valor url', url);
 
@@ -38,6 +41,26 @@ export class OfertasService {
         .map(res => res.json())
         .subscribe(data => {
           this.rest = data;
+          resolve(this.rest);
+        });
+
+    });
+  }
+
+  // Pega o id da campanha e carrega as ofertas
+  getOfertasId(campanha) {
+    console.log('entrou no getOfertasId',campanha.id);
+    let url = this.urlbase + campanha.id;
+    console.log('url', url);
+
+    
+
+    return new Promise(resolve => {
+      this.http.get(url)
+        .map(res => res.json())
+        .subscribe(data => {
+          this.rest = data;
+          console.log('data', data);
           resolve(this.rest);
         });
 
