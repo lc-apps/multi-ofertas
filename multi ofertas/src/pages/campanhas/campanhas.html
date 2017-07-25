@@ -10,23 +10,29 @@
 </ion-header>
 
 
-<ion-content >
+<ion-content>
   <h2 class="special">Campanhas</h2>
 
-  <ion-list>
-    <ion-item *ngFor="let campanha of campanhas" (click)="CampanhaSelecionada(campanha)">
-      <ion-thumbnail item-left>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
-      </ion-thumbnail>
-      <h2><strong>{{campanha.camp_desc}} </strong ></h2>
-      <h2><strong>{{campanha.id}} </strong ></h2>
-      <h3>{{campanha.nome_mercado}}</h3>
-      <ion-row>
-        <ion-col col-2><ion-icon class="icone" name="calendar"> </ion-icon></ion-col>
-        <ion-col col-9>{{campanha.data_inicio | datainicio}}<strong><br></strong>{{campanha.data_fim | datainicio}}</ion-col>
-      </ion-row>
-    </ion-item>
+  <ion-list *ngFor="let campanha of campanhas" (click)="CampanhaSelecionada(campanha)">
+    <ion-card class="card-titulo" >
+      <ion-card-header color="danger" ion-item>
+        <h2><strong>{{campanha.camp_desc}} </strong ></h2>
+      </ion-card-header>
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
+        </ion-thumbnail>
+        <ion-card-content >
+          <h2><strong>{{campanha.nome_mercado}}</strong ></h2>
+          <h2 class="card-background-page">Ofertas válidas de: </h2>
+          <p>{{campanha.data_inicio | datainicio}}<strong> até:</strong></p>
+          <p>{{campanha.data_fim | datainicio}}</p>
+        </ion-card-content>
+      </ion-item>
+
+    </ion-card>
   </ion-list>
+
 
   <ion-list>
     <ion-item *ngFor="let oferta of ofertas">
@@ -44,5 +50,7 @@
 
     </ion-item>
   </ion-list>
+
+
 
 </ion-content>
