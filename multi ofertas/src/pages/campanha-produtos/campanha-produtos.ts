@@ -25,23 +25,13 @@ export class CampanhaProdutos {
   constructor(public navCtrl: NavController,
      public ofertasService: OfertasService,
      public navParams: NavParams) {
-    this.campanha = navParams.get("campanha");
-    console.log('campanha',this.campanha);
+
+    this.ofertas = navParams.get("ofertas");
+
+     console.log('ofertas',this.ofertas);
   }
 
 
-//idcampanha = this.campanha.id;
-
-idcampanha = 5;
-
-//chama ofertas
-  getOfertasId(idcampanha) {
-    console.log('entrou getOfertasId');
-    this.ofertasService.getOfertasId(idcampanha)
-      .then(data => {
-        this.ofertas = data;
-      });
-  }
 
 
   ionViewDidLoad() {

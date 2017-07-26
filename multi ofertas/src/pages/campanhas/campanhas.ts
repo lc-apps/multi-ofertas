@@ -32,6 +32,7 @@ export class Campanhas {
     public campanhasServices: CampanhasService,
     public ofertasService: OfertasService) {
     this.getCampanhas();
+    //
 
   }
 
@@ -49,10 +50,20 @@ export class Campanhas {
     this.ofertasService.getOfertasId(campanha)
       .then(data => {
         this.ofertas = data;
+        this.goToOtherPage(this.ofertas);
       });
+
+
+  }// fim do CampanhaSelecionada
+
+  goToOtherPage(ofertas) {
+
+    console.log('goToOtherPage',ofertas);
+    //causing the nav controller to animate the new page in
+    this.navCtrl.push(CampanhaProdutos, {
+    ofertas: this.ofertas
+  });
   }
-
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Campanhas');

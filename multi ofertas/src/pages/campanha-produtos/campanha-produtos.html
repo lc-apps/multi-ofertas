@@ -4,41 +4,31 @@
     <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
     </button>
-    <ion-title> {{campanha.camp_desc}}</ion-title>
+    <ion-title> Campanhas Produtos</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
 
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail item-left>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
-      </ion-thumbnail>
-      <h3>{{campanha.nome_mercado}}</h3>{{campanha.id}}
-      <ion-row>
-        <ion-col col-2>
-          <ion-icon class="icone" name="calendar"> </ion-icon>
-        </ion-col>
-        <ion-col col-9>{{campanha.data_inicio | datainicio}}<strong><br></strong>{{campanha.data_fim | datainicio}}</ion-col>
-      </ion-row>
-    </ion-item>
-  </ion-list>
+
 
   <ion-list>
     <ion-item *ngFor="let oferta of ofertas">
-      <ion-thumbnail item-left>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
-      </ion-thumbnail>
-      <h2><strong>{{oferta.produto}}</strong ></h2>
-      <h3>{{oferta.nome_mercado}}</h3>
-      <ion-row>
-        <ion-col col-9>De {{oferta.preco_de}} por {{oferta.preco_por}}</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-9>Valida até: {{oferta.data_fim | datainicio}}</ion-col>
-      </ion-row>
-
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 ><h2 class="card-titulo">{{oferta.produto}}</h2></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
+          </ion-col>
+          </ion-row>
+          <ion-row>
+          <ion-col col-6>De {{oferta.preco_de}}</ion-col>
+          <ion-col col-6>por {{oferta.preco_por}}</ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
   </ion-list>
+
 
 </ion-content>
