@@ -14,9 +14,9 @@
   <h2 class="special">Campanhas</h2>
 
   <ion-list *ngFor="let campanha of campanhas" (click)="CampanhaSelecionada(campanha)">
-    <ion-card class="card-titulo" >
+    <ion-card >
       <ion-card-header color="danger" ion-item>
-        <h2><strong>{{campanha.camp_desc}} </strong ></h2>
+        <h2 class="card-titulo">{{campanha.camp_desc}}</h2>
       </ion-card-header>
       <ion-item>
         <ion-thumbnail item-left>

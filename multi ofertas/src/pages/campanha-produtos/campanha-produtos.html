@@ -6,29 +6,31 @@
     </button>
     <ion-title> Campanhas Produtos</ion-title>
   </ion-navbar>
+
+  <ion-toolbar color="danger">
+      <ion-searchbar ></ion-searchbar>
+      <ion-buttons end>
+        <button ion-button icon-only color="royal">
+          <ion-icon name="funnel"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+
 </ion-header>
 <ion-content padding>
 
 
 
   <ion-list>
-    <ion-item *ngFor="let oferta of ofertas">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-12 ><h2 class="card-titulo">{{oferta.produto}}</h2></ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-12>
-              <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
-          </ion-col>
-          </ion-row>
-          <ion-row>
-          <ion-col col-6>De {{oferta.preco_de}}</ion-col>
-          <ion-col col-6>por {{oferta.preco_por}}</ion-col>
-        </ion-row>
-      </ion-grid>
+
+    <ion-item *ngFor="let oferta of ofertas" class="item">
+      <ion-thumbnail item-left>
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
+      </ion-thumbnail>
+      <h2 class="produto-titulo"><strong>{{oferta.produto}}</strong></h2>
+      <p class="preco-de">De: R$ {{oferta.preco_de}}</p>
+      <h3 class="preco-por">Por R$ {{oferta.preco_por}}</h3>
     </ion-item>
   </ion-list>
-
 
 </ion-content>

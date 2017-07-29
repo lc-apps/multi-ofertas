@@ -1,12 +1,45 @@
 page-campanha-produtos {
 
 }
-.card-titulo
+.produto-titulo
 {
+
+  background-color: #FFFFFF;
+  color: #000000;
   font-family: 'Playfair Display', serif;
-  font-size: 1.5em;
-  color : solid #fff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  font-variant: normal;
+  text-align: left;
+  text-decoration: none;
   word-wrap: break-word;
   width: 100%;
 
+}
+
+.item{
+  background-color: solid #fff;
+}
+
+.preco-de{
+  background-color: #FFFFFF;
+  color: #999999;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  font-variant: normal;
+  text-align: left;
+  text-decoration: line-through;
+}
+
+.preco-por{
+  background-color: #FFFFFF;
+  color: #3895FF;
+  font-family: verdana;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  text-decoration: none;
 }
