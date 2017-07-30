@@ -11,7 +11,7 @@
       <ion-searchbar ></ion-searchbar>
       <ion-buttons end>
         <button ion-button icon-only color="royal">
-          <ion-icon name="funnel"></ion-icon>
+          <ion-icon name="ios-funnel"></ion-icon>
         </button>
       </ion-buttons>
     </ion-toolbar>
@@ -23,7 +23,7 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let oferta of ofertas" class="item">
+    <ion-item *ngFor="let oferta of ofertas" (click)="itemSelected(oferta)" class="item">
       <ion-thumbnail item-left>
         <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
       </ion-thumbnail>

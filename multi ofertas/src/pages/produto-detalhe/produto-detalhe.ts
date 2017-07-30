@@ -14,12 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProdutoDetalhe {
 
-public item:any;
+public oferta:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  this.item = navParams.get("item");
+  this.oferta = navParams.get("item");
 
-  console.log('item',this.item);
+  console.log('oferta',this.oferta);
 
   }
 
