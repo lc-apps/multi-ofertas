@@ -24,29 +24,52 @@ import { ProdutoDetalhe } from '../../pages/produto-detalhe/produto-detalhe';
 })
 export class CampanhaProdutos {
 
- public campanha:any;
- public ofertas: any;
+  public campanha: any;
+  public ofertas: any;
+  searchQuery: string = '';
 
 
   constructor(public navCtrl: NavController,
-     public ofertasService: OfertasService,
-     public navParams: NavParams) {
+    public ofertasService: OfertasService,
+    public navParams: NavParams) {
 
     this.ofertas = navParams.get("ofertas");
 
-     console.log('ofertas',this.ofertas);
-  }
+    console.log('ofertas', this.ofertas);
 
-  // Mostra o detalhe do item selecionado
-    itemSelected (item) {
+
+    }
+
+
+    getItems(ev: any) {
+
+       // set val to the value of the searchbar
+       let val = ev.target.value;
+
+       console.log('ev.target.value', val);
+
+       // if the value is an empty string don't filter the items
+       if (val && val.trim() != '') {
+         this.ofertas = this.ofertas.filter((oferta) => {
+           return (oferta.produto.toLowerCase().indexOf(val.toLowerCase()) > -1);
+         })
+       }
+     }
+
+    // Mostra o detalhe do item selecionado
+    itemSelected(item) {
       this.navCtrl.push(ProdutoDetalhe, {
-      item: item
-    });
-      }
+        item: item
+      });
+    }
 
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CampanhaProdutos');
+
+
+
+
+    ionViewDidLoad() {
+      console.log('ionViewDidLoad CampanhaProdutos');
+    }
+
   }
-
-}
