@@ -26,6 +26,7 @@ export class CampanhaProdutos {
 
   public campanha: any;
   public ofertas: any;
+  public ofertas_original: any;
   searchQuery: string = '';
 
 
@@ -35,14 +36,19 @@ export class CampanhaProdutos {
 
     this.ofertas = navParams.get("ofertas");
 
+    // cria uma lista com o valor original
+    this.ofertas_original = this.ofertas;
+
     console.log('ofertas', this.ofertas);
+    console.log('ofertas_original', this.ofertas_original);
 
-
-    }
+  }
 
 
     getItems(ev: any) {
 
+      // carrega o valor original da lista
+       this.ofertas = this.ofertas_original;
        // set val to the value of the searchbar
        let val = ev.target.value;
 
@@ -62,11 +68,6 @@ export class CampanhaProdutos {
         item: item
       });
     }
-
-
-
-
-
 
     ionViewDidLoad() {
       console.log('ionViewDidLoad CampanhaProdutos');
