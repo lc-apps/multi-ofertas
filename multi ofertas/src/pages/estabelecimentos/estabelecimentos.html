@@ -1,0 +1,40 @@
+<!--
+  Generated template for the Estabelecimentos page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Estabelecimentos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <h2 class="special">Estabelecimentos</h2>
+
+  <ion-list>
+    <ion-item *ngFor="let estabelecimento of estabelecimentos">
+      <ion-thumbnail item-left>
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
+      </ion-thumbnail>
+      <h2><strong>{{estabelecimento.nome_fantasia}}</strong ></h2>
+      <h3>{{estabelecimento.endereco}}</h3>
+      <ion-row>
+        <ion-col col-9>{{estabelecimento.telefone1}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-9>Valida até: </ion-col>
+      </ion-row>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

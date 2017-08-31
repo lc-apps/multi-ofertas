@@ -32,6 +32,7 @@ export class Ofertas {
     this.ofertasService.getOfertas()
       .then(data => {
         this.ofertas = data;
+        console.log(this.ofertas);
       });
   }
 

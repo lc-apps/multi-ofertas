@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ProdutosPage } from '../pages/produtos/produtos';
 import { Ofertas } from '../pages/ofertas/ofertas';
 import { Campanhas } from '../pages/campanhas/campanhas';
+import { Estabelecimentos } from '../pages/estabelecimentos/estabelecimentos';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,6 +28,7 @@ export class MyApp {
 
       {title: 'Home',icon: 'ios-home', component: HomePage},
       {title: 'Campanhas',icon: 'bookmark', component: Campanhas},
+      {title: 'Estabelecimentos',icon: 'pin', component: Estabelecimentos},
       {title: 'Produtos',icon: 'basket', component: ProdutosPage},
       {title: 'Ofertas Especiais',icon: 'pricetags', component: Ofertas}
 

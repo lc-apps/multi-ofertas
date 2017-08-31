@@ -18,11 +18,13 @@ import { ProdutoDetalhe } from '../pages/produto-detalhe/produto-detalhe';
 import {CampanhaProdutos} from '../pages/campanha-produtos/campanha-produtos';
 import { Ofertas } from '../pages/ofertas/ofertas';
 import { Campanhas } from '../pages/campanhas/campanhas';
+import { Estabelecimentos } from '../pages/estabelecimentos/estabelecimentos';
 
 
 @NgModule({
   declarations: [
     Campanhas,
+    Estabelecimentos,
     ProdutoDetalhe,
     CampanhaProdutos,
     Ofertas,
@@ -42,6 +44,7 @@ import { Campanhas } from '../pages/campanhas/campanhas';
   bootstrap: [IonicApp],
   entryComponents: [
     Campanhas,
+    Estabelecimentos,
     ProdutoDetalhe,
     CampanhaProdutos,
     ProdutosPage,
