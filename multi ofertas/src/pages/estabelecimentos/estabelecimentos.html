@@ -18,23 +18,15 @@
 
 
 <ion-content padding>
-  <h2 class="special">Estabelecimentos</h2>
+
 
   <ion-list>
-    <ion-item *ngFor="let estabelecimento of estabelecimentos">
-      <ion-thumbnail item-left>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
-      </ion-thumbnail>
-      <h2><strong>{{estabelecimento.nome_fantasia}}</strong ></h2>
-      <h3>{{estabelecimento.endereco}}</h3>
-      <ion-row>
-        <ion-col col-9>{{estabelecimento.telefone1}}</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-9>Valida até: </ion-col>
-      </ion-row>
+      <ion-item *ngFor="let item of estabelecimentos">
+        <ion-avatar item-left >
+          <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{item.foto}}">
+        </ion-avatar>
+        <h2 class="item"><strong>{{item.nome_fantasia}}</strong> </h2>
 
-    </ion-item>
+      </ion-item>
   </ion-list>
-
 </ion-content>

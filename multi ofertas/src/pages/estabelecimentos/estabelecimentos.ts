@@ -19,7 +19,7 @@ import {EstabelecimentosService } from '../../providers/estabelecimentos-service
 
 export class Estabelecimentos {
 
-  estabelecimentos: any;
+  public estabelecimentos: any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
