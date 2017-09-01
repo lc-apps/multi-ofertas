@@ -19,12 +19,14 @@ import {CampanhaProdutos} from '../pages/campanha-produtos/campanha-produtos';
 import { Ofertas } from '../pages/ofertas/ofertas';
 import { Campanhas } from '../pages/campanhas/campanhas';
 import { Estabelecimentos } from '../pages/estabelecimentos/estabelecimentos';
+import { EstabelecimentoDetalhe } from '../pages/estabelecimento-detalhe/estabelecimento-detalhe';
 
 
 @NgModule({
   declarations: [
     Campanhas,
     Estabelecimentos,
+    EstabelecimentoDetalhe,
     ProdutoDetalhe,
     CampanhaProdutos,
     Ofertas,
@@ -45,6 +47,7 @@ import { Estabelecimentos } from '../pages/estabelecimentos/estabelecimentos';
   entryComponents: [
     Campanhas,
     Estabelecimentos,
+    EstabelecimentoDetalhe,
     ProdutoDetalhe,
     CampanhaProdutos,
     ProdutosPage,

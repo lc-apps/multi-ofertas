@@ -4,6 +4,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // Importando serviço
 import {EstabelecimentosService } from '../../providers/estabelecimentos-service';
 
+// Importando página estabelecimentos
+import { EstabelecimentoDetalhe } from '../../pages/estabelecimento-detalhe/estabelecimento-detalhe';
+
 /**
  * Generated class for the Estabelecimentos page.
  *
@@ -38,6 +41,13 @@ export class Estabelecimentos {
         console.log(this.estabelecimentos);
       });
   }
+
+  // Mostra o detalhe do item selecionado
+    itemSelected (item) {
+      this.navCtrl.push(EstabelecimentoDetalhe, {
+      item: item
+    });
+      }
 
 
 

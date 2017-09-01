@@ -8,6 +8,7 @@ import { ProdutosPage } from '../pages/produtos/produtos';
 import { Ofertas } from '../pages/ofertas/ofertas';
 import { Campanhas } from '../pages/campanhas/campanhas';
 import { Estabelecimentos } from '../pages/estabelecimentos/estabelecimentos';
+import { EstabelecimentoDetalhe } from '../pages/estabelecimento-detalhe/estabelecimento-detalhe';
 
 @Component({
   templateUrl: 'app.html'

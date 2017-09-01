@@ -21,7 +21,7 @@
 
 
   <ion-list>
-      <ion-item *ngFor="let item of estabelecimentos">
+      <ion-item *ngFor="let item of estabelecimentos" (click)="itemSelected(item)">
         <ion-avatar item-left >
           <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{item.foto}}">
         </ion-avatar>
