@@ -10,12 +10,45 @@
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-title>
-      {{item.nome_fantasia}}
+      {{loja.nome_fantasia}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+  <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
+  <ion-item>
+    <p>
+      <h2>{{loja.endereco}}</h2> -
+      <h2>{{loja.cidade}}</h2>
+    </p>
+    <p>{{loja.telefone}}</p>
+  </ion-item>
+  <ion-card-content>
+    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-thumbnail item-start>
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
+      </ion-thumbnail>
+    </ion-col>
+
+    <ion-col>
+      <ion-thumbnail item-start>
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
+      </ion-thumbnail>
+    </ion-col>
+
+    <ion-col center text-center>
+      <ion-thumbnail item-start>
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
+      </ion-thumbnail>
+    </ion-col>
+  </ion-row>
+
+
 
 </ion-content>
