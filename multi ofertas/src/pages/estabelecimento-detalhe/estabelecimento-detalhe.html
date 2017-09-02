@@ -1,54 +1,60 @@
-<!--
-  Generated template for the EstabelecimentoDetalhe page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+<ion-header no-border>
   <ion-navbar color="danger">
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
+    <ion-buttons left>
+      <button ion-button icon-only color="light"><ion-icon name="arrow-back"></ion-icon></button>
+    </ion-buttons>
     <ion-title>
       {{loja.nome_fantasia}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
+<ion-content fullscreen>
 
-<ion-content padding>
-  <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
-  <ion-item>
-    <p>
-      <h2>{{loja.endereco}}</h2> -
-      <h2>{{loja.cidade}}</h2>
-    </p>
-    <p>{{loja.telefone}}</p>
-  </ion-item>
-  <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-  </ion-card-content>
+  <ion-card>
 
-  <ion-row>
-    <ion-col>
-      <ion-thumbnail item-start>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
-      </ion-thumbnail>
-    </ion-col>
+    <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
 
-    <ion-col>
-      <ion-thumbnail item-start>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
-      </ion-thumbnail>
-    </ion-col>
+    <ion-row>
+      <ion-col>
+        <ion-thumbnail item-start>
+          <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col>
+        <ion-thumbnail item-start>
+          <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col>
+        <ion-thumbnail item-start>
+          <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
+        </ion-thumbnail>
+      </ion-col>
+    </ion-row>
 
-    <ion-col center text-center>
-      <ion-thumbnail item-start>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
-      </ion-thumbnail>
-    </ion-col>
-  </ion-row>
+    <ion-card-content>
 
+      <ion-item>
+        <h2>{{loja.endereco}}</h2>
+        <p>{{loja.cidade}}</p>
+      </ion-item>
+      {{loja.telefone1}}
+
+    </ion-card-content>
 
 
+
+  </ion-card>
+  <ion-segment [(ngModel)]="category">
+    <ion-segment-button value="campanhas">
+      Campanhas
+    </ion-segment-button>
+    <ion-segment-button value="ofertas">
+      Ofertas
+    </ion-segment-button>
+    <ion-segment-button value="sobre">
+      Sobre
+    </ion-segment-button>
+  </ion-segment>
 </ion-content>
