@@ -6,15 +6,15 @@
     <ion-toolbar color="danger">
       <ion-searchbar (ionInput)="getItems($event)" placeholder="Pesquisar..."></ion-searchbar>
       <ion-buttons end>
-        <button ion-button icon-only color="royal">
+        <button ion-button icon-only color="royal" (click)="reverse()">
             <ion-icon name="ios-reorder"></ion-icon>
           </button>
       </ion-buttons>
     </ion-toolbar>
   </ion-navbar>
-  <ion-row class="topo">
-    <h3 class="texto"> 1000 ofertas encontradas</h3>
-  </ion-row>
+  <div class="texto">
+              1000 ofertas encontradas
+  </div>
 </ion-header>
 
 
