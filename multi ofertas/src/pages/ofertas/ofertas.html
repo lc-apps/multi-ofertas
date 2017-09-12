@@ -13,7 +13,7 @@
     </ion-toolbar>
   </ion-navbar>
   <ion-row class="topo">
-    <p>1000 ofertas encontradas</p>
+    <h3 class="texto"> 1000 ofertas encontradas</h3>
   </ion-row>
 </ion-header>
 
@@ -25,10 +25,13 @@
       <ion-avatar item-left>
         <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
       </ion-avatar>
-        <p> {{oferta.produto}}<ion-badge color="danger" item-end> {{oferta.ofertas}} Ofertas</ion-badge></p>
+        <h2 class="line-break"><strong>{{oferta.produto}}</strong></h2>
       <ion-row>
-        <ion-col col-9>
-          <p> De: R${{oferta.de}} Até: R${{oferta.ate}} </p>
+        <ion-col col-7>
+          <p> De: R$ {{oferta.de}} Até: R$ {{oferta.ate}} </p>
+        </ion-col>
+        <ion-col col-3>
+          <ion-note>{{oferta.ofertas}} Ofertas </ion-note>
         </ion-col>
       </ion-row>
 

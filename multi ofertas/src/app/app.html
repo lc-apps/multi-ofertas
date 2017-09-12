@@ -10,12 +10,14 @@
 </ion-header>
 
 <!-- crian o conteudo do menu -->
-<ion-content >
+<ion-content  class="no-scroll">
   <ion-list >
     <button color="danger" ion-item *ngFor="let p of pages" (click)="openPage(p)">
     <ion-icon class="icone" name="{{p.icon}}"> </ion-icon> {{p.title}}
     </button>
-
+    <ion-item-divider color="light"><ion-icon class="icone" name="ios-settings"> </ion-icon></ion-item-divider>
+    <button color="danger" ion-item><ion-icon class="icone" name="ios-build"> </ion-icon> Configurações </button>
+    <button color="danger" ion-item><ion-icon class="icone" name="ios-contact"> </ion-icon> Conta </button>
   </ion-list>
 </ion-content>
 

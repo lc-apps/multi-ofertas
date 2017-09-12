@@ -32,6 +32,6 @@ button{
 
 }
 
-[noScroll] {
-  overflow: hidden;
+.no-scroll .scroll-content{
+     overflow: hidden;
 }
