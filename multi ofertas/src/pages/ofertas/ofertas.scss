@@ -1,19 +1,6 @@
 page-ofertas {
 
 }
-.topo_bnt
-{
-
-  font-family: 'Playfair Display', serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  font-variant: normal;
-  text-align: center;
-  text-decoration: none;
-  width: 45%;
-
-}
 
 .line-break{
   overflow: inherit ;
@@ -21,18 +8,11 @@ page-ofertas {
   white-space: normal;
 }
 
-.topo
-{
-  background-color: #f53d3d;
-  text-align: center;
-  border-top: 2px solid;
-  border-color: white;
-}
 
 .texto {
 
   font-family: 'Playfair Display', serif;
-  color: #FFFFFF;
+  color: #f53d3d;
   font-family: helvetica;
   font-style: normal;
   font-variant: normal;
@@ -40,4 +20,42 @@ page-ofertas {
   text-decoration: none;
 
 
+}
+
+.ofertade {
+  font-family: 'Playfair Display', serif;
+  color: #006400;
+  font-family: helvetica;
+  font-style: normal;
+  font-variant: small-caps;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.ofertaate{
+  font-family: 'Playfair Display', serif;
+  color: #FF0000;
+  font-family: helvetica;
+  font-style: normal;
+  font-variant: normal;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.ofertas{
+  font-family: 'Playfair Display', serif;
+  color: #C0C0C0;
+  font-family: helvetica;
+  font-style: normal;
+  font-variant: normal;
+  text-align: right;
+  text-decoration: none;
+  padding-right: 0px;
+
+}
+
+.linha {
+  display: inline;
 }

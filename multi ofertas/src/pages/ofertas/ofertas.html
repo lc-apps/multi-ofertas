@@ -12,13 +12,10 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-navbar>
-  <div class="texto">
-              1000 ofertas encontradas
-  </div>
 </ion-header>
 
-
 <ion-content>
+<h6 class="texto"> 1000 ofertas encontradas </h6>
 
   <ion-list>
     <ion-item *ngFor="let oferta of ofertas">
@@ -27,12 +24,10 @@
       </ion-avatar>
         <h2 class="line-break"><strong>{{oferta.produto}}</strong></h2>
       <ion-row>
-        <ion-col col-7>
-          <p> De: R$ {{oferta.de}} Até: R$ {{oferta.ate}} </p>
+        <ion-col col-9>
+        <h4 class="linha">De: R$ </h4><h5 class="ofertade linha"> {{oferta.de}} </h5> Até: R$ <h5 class=" ofertaate linha"> {{oferta.ate}} </h5>
         </ion-col>
-        <ion-col col-3>
-          <ion-note>{{oferta.ofertas}} Ofertas </ion-note>
-        </ion-col>
+        <ion-col col-3><small class="ofertas">{{oferta.ofertas}} Ofertas </small></ion-col>
       </ion-row>
 
     </ion-item>
