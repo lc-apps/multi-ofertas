@@ -53,7 +53,27 @@ export class OfertasService {
     let url = this.urlbase + campanha.id;
     console.log('url', url);
 
-    
+
+
+    return new Promise(resolve => {
+      this.http.get(url)
+        .map(res => res.json())
+        .subscribe(data => {
+          this.rest = data;
+          console.log('data', data);
+          resolve(this.rest);
+        });
+
+    });
+  }
+
+  // Pega o id do produto e carrega as ofertas
+  getOfertasIdProduto(oferta) {
+    console.log('entrou no getOfertasIdProduto',oferta.idproduto);
+    let url = this.urlbase + oferta.idproduto;
+    console.log('url', url);
+
+
 
     return new Promise(resolve => {
       this.http.get(url)

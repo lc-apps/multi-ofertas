@@ -5,6 +5,9 @@ import { LoadingController } from 'ionic-angular';
 // Importando serviço
 import {OfertasService} from '../../providers/ofertas-service';
 
+// Importando Página
+import {OfertaProduto} from '../../pages/oferta-produto/oferta-produto';
+
 /**
  * Generated class for the Ofertas page.
  *
@@ -53,6 +56,38 @@ export class Ofertas {
 
       });
   }
+
+  getOfertasIdProduto(oferta) {
+  console.log(oferta);
+  let loader = this.loadingCtrl.create({
+    content: "Carregando Ofertas, Por favor aguarde...",
+
+  });
+
+  loader.present();
+
+  //chama ofertas por id do produto
+
+  this.ofertasService.getOfertasIdProduto(oferta)
+    .then(data => {
+      this.ofertas = data;
+      loader.dismiss();
+      console.log('retorno', this.ofertas);
+      this.goToOtherPage(this.ofertas);
+
+    });
+
+
+}// getOfertasIdProduto
+
+goToOtherPage(ofertas) {
+
+  console.log('goToOtherPage', ofertas);
+  //causing the nav controller to animate the new page in
+  this.navCtrl.push(OfertaProduto, {
+    ofertas: this.ofertas
+  });
+}
 
   //busca na lista os itens
   getItems(ev: any) {

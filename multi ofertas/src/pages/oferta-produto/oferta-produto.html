@@ -15,19 +15,19 @@
 </ion-header>
 
 <ion-content>
-<h6 class="texto"> 1000 ofertas encontradas </h6>
+<h6 class="texto"> ofertas encontradas </h6>
 
   <ion-list>
-    <ion-item *ngFor="let oferta of ofertas" (click)="getOfertasIdProduto(oferta)">
+    <ion-item *ngFor="let oferta of ofertas">
       <ion-avatar item-left>
         <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
       </ion-avatar>
         <h2 class="line-break"><strong>{{oferta.produto}}</strong></h2>
       <ion-row>
         <ion-col col-9>
-        <h4 class="linha">De: R$ </h4><h5 class="ofertade linha"> {{oferta.de}} </h5> Até: R$ <h5 class=" ofertaate linha"> {{oferta.ate}} </h5>
+        <h4 class="linha">De: R$ </h4><h5 class="ofertaate linha"> {{oferta.preco_de}} </h5> Por R$ <h5 class=" ofertade linha"> {{oferta.preco_por}} </h5>
         </ion-col>
-        <ion-col col-3><small class="ofertas">{{oferta.ofertas}} Ofertas </small></ion-col>
+        <ion-col col-3><small class="ofertas"> </small></ion-col>
       </ion-row>
 
     </ion-item>
