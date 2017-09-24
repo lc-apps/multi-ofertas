@@ -14,22 +14,28 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-<h6 class="texto"> ofertas encontradas </h6>
+<ion-content >
+
+  <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{item.foto_produto}}">
+
+    <h3>{{item.produto}}</h3>
+
+
+
 
   <ion-list>
     <ion-item *ngFor="let oferta of ofertas">
       <ion-avatar item-left>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{oferta.logo | image}}">
       </ion-avatar>
-        <h2 class="line-break"><strong>{{oferta.produto}}</strong></h2>
+        <h2 class="line-break"><strong>{{oferta.nome_fantasia}}</strong></h2>
       <ion-row>
-        <ion-col col-9>
+        <ion-col col-7>
         <h4 class="linha">De: R$ </h4><h5 class="ofertaate linha"> {{oferta.preco_de}} </h5> Por R$ <h5 class=" ofertade linha"> {{oferta.preco_por}} </h5>
         </ion-col>
-        <ion-col col-3><small class="ofertas"> </small></ion-col>
-      </ion-row>
 
+      </ion-row>
+      <ion-col col-3><small class="ofertas">{{oferta.descricao}} </small></ion-col>
     </ion-item>
   </ion-list>
 

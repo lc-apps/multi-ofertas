@@ -5,6 +5,8 @@ import { LoadingController } from 'ionic-angular';
 // Importando serviço
 import {OfertasService} from '../../providers/ofertas-service';
 
+
+
 /**
  * Generated class for the OfertaProduto page.
  *
@@ -21,6 +23,7 @@ import {OfertasService} from '../../providers/ofertas-service';
 export class OfertaProduto {
 
   ofertas: any;
+  item: any;
   public ofertas_original: any;
   searchQuery: string = '';
 
@@ -30,7 +33,10 @@ export class OfertaProduto {
               public ofertasService: OfertasService,) {
 
   this.ofertas = navParams.get("ofertas");
+
+  this.item = this.ofertas[0];
   console.log('ofertas', this.ofertas);
+  console.log('item', this.item);
   }
 
 
@@ -59,6 +65,7 @@ export class OfertaProduto {
      this.ofertas = this.ofertas.reverse();
 
    }
+
 
 
 
