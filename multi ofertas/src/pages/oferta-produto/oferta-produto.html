@@ -3,14 +3,7 @@
     <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
     </button>
-    <ion-toolbar color="danger">
-      <ion-searchbar (ionInput)="getItems($event)" placeholder="Pesquisar..."></ion-searchbar>
-      <ion-buttons end>
-        <button ion-button icon-only color="royal" (click)="reverse()">
-            <ion-icon name="ios-reorder"></ion-icon>
-          </button>
-      </ion-buttons>
-    </ion-toolbar>
+    <p>{{item.produto}}</p>
   </ion-navbar>
 </ion-header>
 
@@ -18,7 +11,7 @@
 
   <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{item.foto_produto}}">
 
-    <h3>{{item.produto}}</h3>
+
 
 
 
@@ -31,7 +24,7 @@
         <h2 class="line-break"><strong>{{oferta.nome_fantasia}}</strong></h2>
       <ion-row>
         <ion-col col-7>
-        <h4 class="linha">De: R$ </h4><h5 class="ofertaate linha"> {{oferta.preco_de}} </h5> Por R$ <h5 class=" ofertade linha"> {{oferta.preco_por}} </h5>
+        <h4 class="linha">De: R$ </h4><h5 class="ofertaate linha"  ng-if="oferta.preco_de >= oferta.preco_por" class="hide"> {{oferta.preco_de}} </h5> Por R$ <h5 class=" ofertade linha"> {{oferta.preco_por}} </h5>
         </ion-col>
 
       </ion-row>

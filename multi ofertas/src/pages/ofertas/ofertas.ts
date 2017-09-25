@@ -24,6 +24,7 @@ import {OfertaProduto} from '../../pages/oferta-produto/oferta-produto';
 export class Ofertas {
 
   ofertas: any;
+  tamanho: any;
   public ofertas_original: any;
   searchQuery: string = '';
 
@@ -51,6 +52,7 @@ export class Ofertas {
         this.ofertas = data;
         // cria uma lista com o valor original
         this.ofertas_original = this.ofertas;
+        this.tamanho = this.ofertas_original.length;
         loader.dismiss();
         console.log(this.ofertas);
 
