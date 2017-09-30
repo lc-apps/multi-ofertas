@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 // Pipes
 import { Image } from './../pipes/image';
 import { DataInicio } from './../pipes/datainicio';
+import { Orderby } from './../pipes/orderby';
 
 
 import { MyApp } from './app.component';
@@ -34,6 +35,7 @@ import { EstabelecimentoDetalhe } from '../pages/estabelecimento-detalhe/estabel
     OfertaProduto,
     Image,
     DataInicio,
+    Orderby,
     ProdutosPage,
     MyApp,
     HomePage

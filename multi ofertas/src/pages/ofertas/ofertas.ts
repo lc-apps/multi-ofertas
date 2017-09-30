@@ -34,6 +34,8 @@ export class Ofertas {
     public loadingCtrl: LoadingController,) {
     this.presentLoading();
 
+    
+
   }
 
 
@@ -89,6 +91,11 @@ goToOtherPage(ofertas) {
   this.navCtrl.push(OfertaProduto, {
     ofertas: this.ofertas
   });
+  this.restauraOfertas();
+}
+
+restauraOfertas(){
+  this.ofertas = this.ofertas_original;
 }
 
   //busca na lista os itens

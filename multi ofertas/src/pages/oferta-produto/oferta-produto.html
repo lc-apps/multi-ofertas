@@ -1,26 +1,27 @@
-<ion-header>
+<ion-header >
   <ion-navbar color="danger">
     <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
     </button>
-    <p>{{item.produto}}</p>
+    <ion-title>
+      {{item.produto}}
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
 
+<ion-card>
   <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{item.foto_produto}}">
-
-
-
+</ion-card>
 
 
 
   <ion-list>
-    <ion-item *ngFor="let oferta of ofertas">
-      <ion-avatar item-left>
+    <ion-item *ngFor="let oferta of ofertas | orderby:'preco_por'">
+      <ion-thumbnail  item-left>
         <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{oferta.logo | image}}">
-      </ion-avatar>
+      </ion-thumbnail>
         <h2 class="line-break"><strong>{{oferta.nome_fantasia}}</strong></h2>
       <ion-row>
         <ion-col col-7>

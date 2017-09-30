@@ -31,7 +31,7 @@ export class OfertaProduto {
               public navParams: NavParams,
               public loadingCtrl: LoadingController,
               public ofertasService: OfertasService,) {
-
+  console.log('Oferta Produto');
   this.ofertas = navParams.get("ofertas");
 
   this.item = this.ofertas[0];
