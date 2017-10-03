@@ -4,14 +4,16 @@
 <!-- para usar o toolbar term que colocar dentro de um ion-header ou footer -->
 
 <ion-header class="LoadingController" padding>
-
-      <img  src="assets/img/logo_hor.png"/>
+  <ion-title>
+    Multi Ofertas
+  </ion-title>
+      
 
 </ion-header>
 
 <!-- crian o conteudo do menu -->
 <ion-content  class="no-scroll">
-  <ion-list >
+  <ion-list no-lines >
     <button color="danger" ion-item *ngFor="let p of pages" (click)="openPage(p)">
     <ion-icon class="icone" name="{{p.icon}}"> </ion-icon> {{p.title}}
     </button>

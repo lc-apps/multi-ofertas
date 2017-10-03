@@ -30,7 +30,6 @@ export class MyApp {
       {title: 'Home',icon: 'ios-home', component: HomePage},
       {title: 'Campanhas',icon: 'bookmark', component: Campanhas},
       {title: 'Estabelecimentos',icon: 'pin', component: Estabelecimentos},
-      {title: 'Produtos',icon: 'basket', component: ProdutosPage},
       {title: 'Ofertas Especiais',icon: 'pricetags', component: Ofertas}
 
     ];

@@ -29,17 +29,16 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  twitter:    #55acee
+  twitter:    #55acee,
+  branco:     #FFFFFF
 );
 
 $list-border-color:         #f53d3d !default;
+$searchbar-md-input-placeholder-color: #f53d3d;
+$searchbar-ios-input-placeholder-color: #f53d3d;
+$searchbar-ios-input-text-color: #f53d3d;
+$searchbar-md-input-text-color: #f53d3d;
 
-// $toolbar-background:        #f53d3d !default;
-// $toolbar-border-color:       #55acee !default;
-
-$searchbar-md-background-color:          #f53d3d !default;
-/// @prop - Color of the searchbar input placeholder
-$searchbar-md-input-placeholder-color:   black !default;
 
 
 // App iOS Variables

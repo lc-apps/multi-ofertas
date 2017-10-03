@@ -3,11 +3,22 @@
     <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
     </button>
-    <ion-title>
-      {{item.produto}}
-    </ion-title>
+    <h6 class="line-break"><strong>  {{item.produto}}</strong></h6>
   </ion-navbar>
+  <ion-segment color="danger">
+    <ion-segment-button   value="produto">
+      A -> Z
+    </ion-segment-button>
+    <ion-segment-button value="data">
+      Data
+    </ion-segment-button>
+    <ion-segment-button value="estabelecimento">
+      Estabelecimento
+    </ion-segment-button>
+  </ion-segment>
 </ion-header>
+
+
 
 <ion-content>
 

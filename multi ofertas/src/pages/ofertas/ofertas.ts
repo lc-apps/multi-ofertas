@@ -34,7 +34,7 @@ export class Ofertas {
     public loadingCtrl: LoadingController,) {
     this.presentLoading();
 
-    
+
 
   }
 

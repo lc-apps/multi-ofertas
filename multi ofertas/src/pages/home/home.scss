@@ -1,31 +1,17 @@
 page-home {
 
 
-    .card-background-page {
-
-      ion-card {
-        position: relative;
-        text-align: center;
-      }
-
-      .card-title {
-        position: absolute;
-        top: 6%;
-        font-size: 2.1em;
-        width: 100%;
-        font-weight: bold;
-        color: black;
-        font-stretch: extra-condensed;
-      }
-
-      .card-subtitle {
-        font-size: 1.5em;
-        position: absolute;
-        top: 42%;
-        width: 100%;
-        color: black;
-      }
-
+    .logo{
+      width: 70%;
+      height: 70%;
     }
 
+    .no-scroll .scroll-content{
+         overflow: hidden;
+    }
+
+    .searchbar{
+      background-color: #f53d3d;
+      
+    }
 }
