@@ -5,10 +5,29 @@
     </button>
     <img class="logo" src="assets/img/logo_hor.png" />
   </ion-navbar>
-  <ion-searchbar class="searchbar"  placeholder="Pesquisar Ofertas"></ion-searchbar>
+  <ion-searchbar class="searchbar" (ionInput)="pesquisarOfertas($event)" placeholder="Pesquisar Ofertas"></ion-searchbar>
 </ion-header>
 
-<ion-content class="no-scroll">
+<ion-content>
+
+
+  <ion-list>
+    <ion-item *ngFor="let oferta of ofertas" (click)="getOfertasIdProduto(oferta)">
+      <ion-thumbnail item-left>
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/foto1/{{oferta.foto1 | image}}">
+      </ion-thumbnail>
+        <h2 class="line-break"><strong>{{oferta.produto}}</strong></h2>
+      <ion-row>
+        <ion-col col-9>
+        <h4 class="linha">De: R$ </h4><h5 class="ofertade linha"> {{oferta.de}} </h5> Até: R$ <h5 class=" ofertaate linha"> {{oferta.ate}} </h5>
+        </ion-col>
+        <ion-col col-3><small class="ofertas">{{oferta.ofertas}} Ofertas </small></ion-col>
+      </ion-row>
+
+    </ion-item>
+  </ion-list>
+
+
   <img src="assets/img/market.png" />
   <ion-card-content>
     <ion-card-title>

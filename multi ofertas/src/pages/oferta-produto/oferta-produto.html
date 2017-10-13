@@ -23,9 +23,8 @@
 <ion-content>
 
 <ion-card>
-  <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{item.foto_produto}}">
+  <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/foto1/{{item.foto1}}">
 </ion-card>
-
 
 
   <ion-list>
@@ -34,13 +33,16 @@
         <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{oferta.logo | image}}">
       </ion-thumbnail>
         <h2 class="line-break"><strong>{{oferta.nome_fantasia}}</strong></h2>
+        <h4>{{oferta.descricao}}</h4>
       <ion-row>
         <ion-col col-7>
-        <h4 class="linha">De: R$ </h4><h5 class="ofertaate linha"  ng-if="oferta.preco_de >= oferta.preco_por" class="hide"> {{oferta.preco_de}} </h5> Por R$ <h5 class=" ofertade linha"> {{oferta.preco_por}} </h5>
+        <h5 class="linha ofertaate" > De: R$  {{oferta.preco_de}} </h5> Por R$ <h5 class=" ofertade linha"> {{oferta.preco_por}} </h5>
         </ion-col>
 
+        <ion-col col-7>
+        <h5 class="linha">Oferta valida até: {{oferta.data_fim | datainicio}} </h5>
+        </ion-col>
       </ion-row>
-      <ion-col col-3><small class="ofertas">{{oferta.descricao}} </small></ion-col>
     </ion-item>
   </ion-list>
 

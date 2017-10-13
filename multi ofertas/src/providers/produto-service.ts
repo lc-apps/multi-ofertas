@@ -20,7 +20,7 @@ export class ProdutoService {
   constructor(public http: Http,
               public alertCtrl: AlertController) {
 
-    console.log('Hello ProdutoService Provider');
+    console.log('olá página produto serviço');
 
   }
 

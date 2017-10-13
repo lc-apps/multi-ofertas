@@ -26,7 +26,7 @@
 
     <ion-item *ngFor="let oferta of ofertas" (click)="itemSelected(oferta)" class="item">
       <ion-thumbnail item-left>
-        <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/{{oferta.foto | image}}">
+        <img src="http://www.multiofertas.com.br/multiofertas/fotos/produtos/foto1/{{oferta.foto1 | image}}">
       </ion-thumbnail>
       <h2 class="produto-titulo"><strong>{{oferta.produto}}</strong></h2>
       <p class="preco-de">De: R$ {{oferta.preco_de}}</p>

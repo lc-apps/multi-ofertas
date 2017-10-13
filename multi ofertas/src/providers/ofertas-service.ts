@@ -15,6 +15,7 @@ export class OfertasService {
   idcampanha: string = "";
   campanha: any;
   urlbase: string = "https://morest.herokuapp.com/campanhas/";
+  urlnome: string = "https://morest.herokuapp.com/campanhas/nome/";
 
 
   constructor(public http: Http) {
@@ -82,6 +83,26 @@ export class OfertasService {
           this.rest = data;
           console.log('data', data);
           resolve(this.rest);
+        });
+
+    });
+  }
+
+  // faz a pesquisa no banco de dados pela api morest
+  nome(val) {
+
+    //pega a variavel passada com parametro
+    let url = this.urlnome + val;
+    console.log('valor url', url);
+
+    // Se ainda não tem os dados
+    return new Promise(resolve => {
+      this.http.get(url)
+        .map(res => res.json())
+        .subscribe(data => {
+            this.rest = data;
+            console.log('pesquisa retorno', data);
+            resolve(this.rest);
         });
 
     });
