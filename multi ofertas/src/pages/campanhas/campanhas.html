@@ -11,25 +11,21 @@
 
 
 <ion-content>
-  <h2 class="special">Campanhas</h2>
-
-  <ion-list *ngFor="let campanha of campanhas" (click)="CampanhaSelecionada(campanha)">
-    <ion-card >
-      <ion-card-header color="danger" ion-item>
-        <h2 class="card-titulo">{{campanha.camp_desc}}</h2>
-      </ion-card-header>
-      <ion-item>
-        <ion-thumbnail item-left>
+  <ion-list>
+      <ion-item *ngFor="let campanha of campanhas" (click)="CampanhaSelecionada(campanha)">
+        <ion-thumbnail item-left >
           <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{campanha.logo_mercado}}">
         </ion-thumbnail>
-        <ion-card-content >
-          <h2><strong>{{campanha.nome_mercado}}</strong ></h2>
-          <h2 class="card-background-page">Ofertas válidas de: </h2>
-          <p>{{campanha.data_inicio | datainicio}}<strong> até:</strong></p>
-          <p>{{campanha.data_fim | datainicio}}</p>
-        </ion-card-content>
+        <h2 class="item"><strong>{{campanha.camp_desc}}</strong> </h2>
+        <h3 class="item">{{campanha.nome_mercado}}</h3>
+        <ion-row>
+          <h4 class="card-background-page">Ofertas válidas de: </h4>
+          <ion-col col-9>
+          <h4 class="linha"></h4><h5 class="campde linha"> {{campanha.data_inicio | datainicio}} </h5> - <h5 class=" campate linha"> {{campanha.data_fim | datainicio}} </h5>
+          </ion-col>
+        </ion-row>
       </ion-item>
-
-    </ion-card>
   </ion-list>
+
+
 </ion-content>

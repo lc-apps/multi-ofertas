@@ -7,8 +7,6 @@ import {OfertasService} from '../../providers/ofertas-service';
 // Importando serviço
 import {ProdutoService} from '../../providers/produto-service';
 
-// Importando página
-import { ProdutoDetalhe } from '../../pages/produto-detalhe/produto-detalhe';
 
 /**
  * Generated class for the CampanhaProdutos page.
@@ -62,12 +60,7 @@ export class CampanhaProdutos {
        }
      }
 
-    // Mostra o detalhe do item selecionado
-    itemSelected(item) {
-      this.navCtrl.push(ProdutoDetalhe, {
-        item: item
-      });
-    }
+
 
     ionViewDidLoad() {
       console.log('ionViewDidLoad CampanhaProdutos');

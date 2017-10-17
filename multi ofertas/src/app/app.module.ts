@@ -14,8 +14,6 @@ import { Orderby } from './../pipes/orderby';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ProdutosPage } from '../pages/produtos/produtos';
-import { ProdutoDetalhe } from '../pages/produto-detalhe/produto-detalhe';
 import {CampanhaProdutos} from '../pages/campanha-produtos/campanha-produtos';
 import { Ofertas } from '../pages/ofertas/ofertas';
 import {OfertaProduto} from '../pages/oferta-produto/oferta-produto';
@@ -29,14 +27,12 @@ import { EstabelecimentoDetalhe } from '../pages/estabelecimento-detalhe/estabel
     Campanhas,
     Estabelecimentos,
     EstabelecimentoDetalhe,
-    ProdutoDetalhe,
     CampanhaProdutos,
     Ofertas,
     OfertaProduto,
     Image,
     DataInicio,
     Orderby,
-    ProdutosPage,
     MyApp,
     HomePage
 
@@ -52,9 +48,7 @@ import { EstabelecimentoDetalhe } from '../pages/estabelecimento-detalhe/estabel
     Campanhas,
     Estabelecimentos,
     EstabelecimentoDetalhe,
-    ProdutoDetalhe,
     CampanhaProdutos,
-    ProdutosPage,
     Ofertas,
     OfertaProduto,
     MyApp,

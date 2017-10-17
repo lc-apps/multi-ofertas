@@ -1,60 +1,66 @@
 <ion-header no-border>
-  <ion-navbar color="danger">
+  <ion-navbar color="danger" class="navmenu">
     <ion-buttons left>
-      <button ion-button icon-only color="light"><ion-icon name="arrow-back"></ion-icon></button>
+        <button ion-button icon-only color="light">{{loja.nome_fantasia}}</button>
     </ion-buttons>
-    <ion-title>
-      {{loja.nome_fantasia}}
-    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content fullscreen>
-
-  <ion-card>
-
-    <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
-
-    <ion-row>
-      <ion-col>
-        <ion-thumbnail item-start>
-          <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col>
-        <ion-thumbnail item-start>
-          <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col>
-        <ion-thumbnail item-start>
-          <img src="http://www.multiofertas.com.br/multiofertas/fotos/estabelecimentos/{{loja.foto | image}}">
-        </ion-thumbnail>
-      </ion-col>
-    </ion-row>
-
-    <ion-card-content>
-
-      <ion-item>
-        <h2>{{loja.endereco}}</h2>
-        <p>{{loja.cidade}}</p>
-      </ion-item>
-      {{loja.telefone1}}
-
-    </ion-card-content>
 
 
 
-  </ion-card>
-  <ion-segment [(ngModel)]="category">
-    <ion-segment-button value="campanhas">
-      Campanhas
-    </ion-segment-button>
-    <ion-segment-button value="ofertas">
-      Ofertas
-    </ion-segment-button>
-    <ion-segment-button value="sobre">
-      Sobre
-    </ion-segment-button>
-  </ion-segment>
+
+
+
+<ion-content>
+  <img src="assets/img/pin.png" />
+  <ion-card-content>
+
+    <ion-list  >
+      <button ion-item >
+       <ion-icon class="icone" name="md-pin"> </ion-icon> {{loja.endereco}} - N: {{loja.numero}}, {{loja.cidade}}
+      </button>
+      <button ion-item >
+       <ion-icon class="icone" name="md-call"> </ion-icon> {{loja.telefone1}} - {{loja.telefone2}}
+
+      </button>
+      <button ion-item >
+       <ion-icon class="icone" name="md-at"> </ion-icon> {{loja.email}}
+      </button>
+    </ion-list>
+
+
+
+    <ion-segment [(ngModel)]="category" color="danger">
+      <ion-segment-button value="campanhas">
+        Campanhas
+      </ion-segment-button>
+      <ion-segment-button value="ofertas">
+        Ofertas
+      </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="category">
+  <ion-list *ngSwitchCase="'campanhas'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-puppy-1.jpg">
+      </ion-thumbnail>
+      <h2>Ruby</h2>
+    </ion-item>
+    ...
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'ofertas'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-kitten-1.jpg">
+      </ion-thumbnail>
+      <h2>Luna</h2>
+    </ion-item>
+    ...
+  </ion-list>
+</div>
+
+  </ion-card-content>
 </ion-content>
