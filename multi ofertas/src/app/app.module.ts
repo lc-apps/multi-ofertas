@@ -10,6 +10,7 @@ import { HttpModule } from '@angular/http';
 import { Image } from './../pipes/image';
 import { DataInicio } from './../pipes/datainicio';
 import { Orderby } from './../pipes/orderby';
+import { Preco } from './../pipes/preco';
 
 
 import { MyApp } from './app.component';
@@ -20,6 +21,7 @@ import {OfertaProduto} from '../pages/oferta-produto/oferta-produto';
 import { Campanhas } from '../pages/campanhas/campanhas';
 import { Estabelecimentos } from '../pages/estabelecimentos/estabelecimentos';
 import { EstabelecimentoDetalhe } from '../pages/estabelecimento-detalhe/estabelecimento-detalhe';
+import { Conta } from '../pages/conta/conta';
 
 
 @NgModule({
@@ -33,8 +35,10 @@ import { EstabelecimentoDetalhe } from '../pages/estabelecimento-detalhe/estabel
     Image,
     DataInicio,
     Orderby,
+    Preco,
     MyApp,
-    HomePage
+    HomePage,
+    Conta
 
   ],
   imports: [
@@ -52,7 +56,8 @@ import { EstabelecimentoDetalhe } from '../pages/estabelecimento-detalhe/estabel
     Ofertas,
     OfertaProduto,
     MyApp,
-    HomePage
+    HomePage,
+    Conta
   ],
 
   providers: [

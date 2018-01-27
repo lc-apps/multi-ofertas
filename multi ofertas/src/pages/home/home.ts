@@ -38,25 +38,16 @@ export class HomePage {
     // seta o valor passado pelo searchBar
     let val = ev.target.value;
     console.log('valor do imput ', val);
+
     // se o valor for diferente de vazio excuta a pesquisa
-    if (val && val.trim() != '') {
+
       this.ofertasService.nome(val)
         .then(rest => {
           this.ofertas = rest;
           // cria uma lista com o valor original
           this.ofertas_original = this.ofertas;
         });
-    }
-    else {
-      // se vazio mostra alert.
-      let alert = this.alertCtrl.create({
-        title: 'Atenção',
-        subTitle: 'Digite um produto para realizar a pesquisa !',
-        buttons: ['OK']
-      });
-      alert.present();
-
-    }
+    
   }
 
   getOfertasIdProduto(oferta) {
